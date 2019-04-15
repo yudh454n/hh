@@ -10,12 +10,13 @@ function generateRandomString($length = 10) {
 }
 $ug=array("8.1.0; 4b0e5fe4484d2ea6 Build/25","8.0.0; SM-G960F Build/R16NW","6.0.1; SM-G920V Build/MMB29K","5.1.1; SM-G928X Build/LMY47X","6.0.1; Nexus 6P Build/MMB29P","6.0.1; E6653 Build/32.2.A.0.253","6.0; HTC One M9 Build/MRA58K","7.1.2; 8f8415e0495ca617 Build/25","6.0; 4b2897bdd595f6a9 Build/25");
 $random = rand(0,8);
-//echo "MASUKAN REFF = ";
-$reff = "REF MU";
-$mail = array ("USERNAME EMAIL YANDEX);
+echo "MASUKAN REFF = ";
+$reff = trim(fgets(STDIN));
+echo "MASUKAN USERNAME EMAIL = ";
+$mail = trim(fgets(STDIN));
 $rand = rand(0,3);
-//ECHO "BERAPA REF = " ;
-$berapa = "BERAPA REF";
+ECHO "BERAPA REQUEST = " ;
+$berapa = trim(fgets(STDIN));;
 for($a=0;$a<$berapa;$a++){
     $email = $mail[array_rand($mail)]."+".generateRandomString(7)."@yandex.com";
     $post = "email=".urlencode($email)."&password=Agunk123%40&referral_id=$reff&monetize=1";
