@@ -18,7 +18,7 @@ $rand = rand(0,3);
 ECHO "BERAPA REQUEST = " ;
 $berapa = trim(fgets(STDIN));;
 for($a=0;$a<$berapa;$a++){
-    $email = $mail[array_rand($mail)]."+".generateRandomString(7)."@yandex.com";
+    $email = $mail[($mail)]."+".generateRandomString(7)."@yandex.com";
     $post = "email=".urlencode($email)."&password=Agunk123%40&referral_id=$reff&monetize=1";
 
     $arr = array("\r"," ");
